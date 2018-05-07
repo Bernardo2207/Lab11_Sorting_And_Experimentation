@@ -114,7 +114,7 @@ public class ExperimentController{
 		for (StrategiesTimeCollection<Integer> trc : resultsPerStrategy) {
 			String fileName = "results"+trc.getStrategyName()+".txt"; 
 			PrintStream out = new PrintStream(new File("experimentalResults", fileName)); 
-
+			out.println(trc.getStrategyName());
 			for (Map.Entry<Integer, Float> e : trc)
 				out.println(e.getKey()+ "\t" + e.getValue());
 			
